@@ -1,0 +1,49 @@
+name: Feature request
+description: Suggest a change to the code in this repository.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+      placeholder: My users sign in with Supabase, and the starter only shows how to plug in a session cookie.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change? Name the files, functions or settings if you know them.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Other ways you considered or use today.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release tag or commit SHA you are on.
+      placeholder: v1.0.0
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Pull request
+      description: Bigger changes are agreed here first, so the work is not wasted.
+      options:
+        - I would like to send a pull request
+        - I would rather someone else builds it
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      options:
+        - label: This does not reward joins, invites, likes, reviews or other engagement, and does not target users under 16.
+          required: true
+        - label: I removed my real keys and real user IDs from everything above.
+          required: true

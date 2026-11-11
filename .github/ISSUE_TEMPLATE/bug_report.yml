@@ -1,0 +1,63 @@
+name: Bug report
+description: The code here does something different from what its README or the Moonetix docs say.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questions about your own integration or your account go to [docs.moonetix.com](https://docs.moonetix.com) or [moonetix.com/contact](https://moonetix.com/contact). Security problems: report them privately, see the security policy.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release tag or commit SHA.
+      placeholder: v1.0.0 or 3f2c1ab
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+      description: Language runtime, framework, platform and OS versions that matter here.
+      placeholder: Node 22.13.0 on Ubuntu 24.04, Next.js 16.4.6
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Commands, requests or code. A failing test is the best report.
+      placeholder: |
+        1. Start the handler with MOONETIX_POSTBACK_KEY=test_postback_key_not_secret
+        2. Send the same status 1 postback twice
+        3. Check the balance of user 42
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      placeholder: The balance goes up once and the second request gets 200.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: What happened instead. Include the HTTP status your server answered, if there is one.
+      placeholder: The balance went up twice.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Error output or log lines. Shown as code.
+      render: text
+  - type: checkboxes
+    id: keys
+    attributes:
+      label: Secrets
+      options:
+        - label: I removed my real keys (link hash salt, postback secret key) and real user IDs from everything above.
+          required: true

@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Integration docs
+    url: https://docs.moonetix.com
+    about: Link signing, postback macros, hash mismatches and reversals. Most integration questions are answered here.
+  - name: Account, offers and payouts
+    url: https://moonetix.com/contact
+    about: Questions about your Moonetix account. Never send your link hash salt or postback secret key.
+  - name: Security policy
+    url: https://github.com/moonetix/.github/blob/main/SECURITY.md
+    about: Report security problems privately, not in a public issue.
